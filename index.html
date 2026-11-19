@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>以然收藏页 - 隐私政策</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --card: #ffffff;
+      --text: #1a1a1a;
+      --text-secondary: #555;
+      --border: #e5e7eb;
+      --accent: #2563eb;
+      --accent-light: #eff6ff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+    header {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px 36px;
+      margin-bottom: 28px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+    .meta {
+      color: var(--text-secondary);
+      font-size: 0.925rem;
+    }
+    .meta span { margin-right: 16px; }
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 650;
+      margin-bottom: 14px;
+      color: var(--text);
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    p, li { color: var(--text-secondary); margin-bottom: 10px; }
+    ul { padding-left: 1.4em; margin-bottom: 8px; }
+    li { margin-bottom: 6px; }
+    strong { color: var(--text); font-weight: 600; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .note {
+      background: var(--accent-light);
+      border-left: 4px solid var(--accent);
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+      font-size: 0.95rem;
+    }
+    footer {
+      text-align: center;
+      color: #888;
+      font-size: 0.875rem;
+      margin-top: 40px;
+      padding-top: 20px;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 24px 14px 60px; }
+      header, section { padding: 22px 18px; }
+      h1 { font-size: 1.45rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>以然收藏页 — 隐私政策</h1>
+      <div class="meta">
+        <span>生效日期：2026-11-17</span>
+        <span>最后更新：2026-11-19</span>
+      </div>
+      <p style="margin-top:14px;color:var(--text-secondary);">
+        开发者 / 联系方式：以然 · 
+        <a href="mailto:3405848850@qq.com">3405848850@qq.com</a>
+      </p>
+    </header>
+
+    <section>
+      <h2>1. 产品用途</h2>
+      <p>以然收藏页是一款浏览器新标签页扩展，用于管理浏览器书签、提供新标签页搜索入口、显示用户选择的布局与壁纸，并提供用户主动打开的日历、天气、计算器、汇率、AI 网站导航等工具。</p>
+      <p>本扩展的单一用途是提供可自定义的新标签页与浏览器书签管理界面。其他功能均为用户主动触发的辅助模块，不改变浏览器默认搜索引擎，不注入网页广告。</p>
+    </section>
+
+    <section>
+      <h2>2. 本地保存的信息</h2>
+      <p>扩展会在用户设备本地保存以下信息：</p>
+      <ul>
+        <li>设置、布局预设、搜索引擎选择</li>
+        <li>书签点击统计、置顶书签 ID</li>
+        <li>壁纸和主题偏好（用户上传的壁纸文件保存在本地 IndexedDB）</li>
+        <li>日历缓存、天气缓存</li>
+        <li>AI 分类与更新时间、用户自定义 AI 更新源地址</li>
+        <li>网站图标缓存</li>
+      </ul>
+      <p>主要使用浏览器提供的 <code>storage.local</code>、IndexedDB 和页面本地存储。扩展通过浏览器书签 API 读取书签树以显示书签；导入、删除重复书签等操作仅在用户主动操作时执行。</p>
+      <div class="note">
+        扩展不运营账号系统，不包含广告 SDK 或行为分析 SDK。当前代码未实现将书签列表、密码、表单内容上传至开发者服务器的功能。
+      </div>
+    </section>
+
+    <section>
+      <h2>3. 网络请求与第三方服务</h2>
+      <p>为提供用户可见功能，扩展会连接下列第三方服务。服务商可能按其自身政策处理请求中的 IP 地址、请求时间和网络元数据：</p>
+      <ul>
+        <li><strong>天气与定位：</strong>若浏览器已授予地理位置权限，扩展读取设备提供的坐标并将坐标发送给 Open-Meteo 获取天气；否则会尝试通过 ipwho.is、GeoJS 或 ipapi.co 根据网络 IP 获取粗略地区，再将地区坐标发送给 Open-Meteo。天气结果缓存在本地。</li>
+        <li><strong>节假日：</strong>Nager.Date 获取国家列表和法定节假日数据；请求包含所选国家代码和年份。</li>
+        <li><strong>每日壁纸：</strong>Bing 图片服务获取每日壁纸元数据与图片。</li>
+        <li><strong>AI 模型列表：</strong>用户打开 AI 工具面板或主动刷新时，OpenRouter 获取公开模型目录元数据，不发送用户的聊天内容或书签数据。用户可选填自定义 HTTPS JSON 更新源；启用后扩展会向该地址发出请求，该服务器可看到请求的 IP 和时间。</li>
+        <li><strong>汇率与热点：</strong>open.er-api.com 提供公开汇率；api.vvhan.com 提供公开热点标题。</li>
+        <li><strong>网站图标：</strong>扩展可能从书签网站自身的图标地址、favicon.im 或 icon.horse 获取网站图标。启用自动缓存时，扩展会在用户授权后读取打开标签页的网址，并可能请求该网页 HTML 以提取图标链接；相关网站或图标服务可能获知被请求的网站域名。页面内容只用于定位图标，不上传给开发者。</li>
+        <li><strong>用户主动打开的链接：</strong>AI 工具、搜索和其他快捷入口会打开对应第三方网站；这些网站按各自隐私政策处理访问数据。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. 权限说明</h2>
+      <ul>
+        <li><strong>storage：</strong>保存本地设置与缓存。</li>
+        <li><strong>bookmarks：</strong>显示和管理用户主动操作的浏览器书签。</li>
+        <li><strong>可选 tabs 与全部网站访问权限（&lt;all_urls&gt;）：</strong>仅在用户主动启用跨标签页网站图标自动缓存时申请；该功能需要读取打开标签页的网页地址并获取对应网站图标。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. 数据共享与安全</h2>
+      <p>开发者不出售用户数据，不将其用于广告画像或信用评估。除上文列出的功能服务请求外，扩展不向其他第三方传输用户数据。</p>
+      <p>扩展声明的天气、节假日、汇率、热点、AI 模型目录等固定 API 使用 HTTPS；网站图标按网页提供的地址加载，个别用户书签站点可能仍提供 HTTP 图标资源。本地数据由浏览器扩展存储机制管理。</p>
+    </section>
+
+    <section>
+      <h2>6. 用户选择与删除</h2>
+      <p>用户可以：</p>
+      <ul>
+        <li>关闭天气、图标自动缓存等功能</li>
+        <li>在浏览器扩展权限设置中撤销可选权限</li>
+        <li>删除本地扩展数据</li>
+        <li>卸载扩展</li>
+      </ul>
+      <p>删除扩展数据前请先导出需要保留的书签或设置。</p>
+    </section>
+
+    <section>
+      <h2>7. 政策更新与联系</h2>
+      <p>政策更新时会同步修订本页面。如有隐私相关问题，请联系：</p>
+      <p style="margin-top:12px;">
+        <strong>以然</strong><br>
+        邮箱：<a href="mailto:3405848850@qq.com">3405848850@qq.com</a>
+      </p>
+    </section>
+
+    <footer>
+      © 2026 以然收藏页 · 本隐私政策适用于 Microsoft Edge / Chromium 浏览器扩展
+    </footer>
+  </div>
+</body>
+</html>
